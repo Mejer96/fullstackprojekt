@@ -23,6 +23,10 @@ li a:hover {
     background-color: darkblue;
 }
 
+.active {
+    background-color: #04AA6D;
+}
+
 /* Tekstformat*/
 .center-div
 {
