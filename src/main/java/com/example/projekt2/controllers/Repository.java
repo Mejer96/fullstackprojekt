@@ -57,16 +57,32 @@ public class Repository {
     public void createUser(String username, String password) {
         Statement statement = createStatement();
         String mySQLStatement = "INSERT INTO users (username, user_password) VALUES (" + username + "," + password + ")";
+        createQuery(mySQLStatement, statement);
     }
 
     public void createWish(String name, int price, String description, String wishlistID) {
         Statement statement = createStatement();
         String mySQLStatement = "INSERT INTO wish (item_name, item_price, item_description, wishlist_ID) VALUES (" + name + "," + price + "," + description + "," + wishlistID + ")";
+        createQuery(mySQLStatement, statement);
+
+    }
+
+    public void deleteWish(String wish_ID) {
+        Statement statement = createStatement();
+        String mySQLStatement = "DELETE FROM wishlist WHERE wish_ID='" + wish_ID + "'";
+        createQuery(mySQLStatement, statement);
     }
 
 
-    public void createWishlist(String name, String description) {
+    public void createWishlist(String name, String description, String user_ID) {
         Statement statement = createStatement();
-        String mySQLStatement = "INSERT INTO wishlist (wishlist_name, wishlist_description, user_ID) VALUES (" + name + "," + description + ")";
+        String mySQLStatement = "INSERT INTO wishlist (wishlist_name, wishlist_description, user_ID) VALUES (" + name + "," + description + "," + user_ID + ")";
+        createQuery(mySQLStatement, statement);
+    }
+
+    public void deleteWishlist(String wishlist_ID) {
+        Statement statement = createStatement();
+        String mySQLStatement = "DELETE FROM wishlist WHERE wishlist_ID='" + wishlist_ID + "'";
+        createQuery(mySQLStatement, statement);
     }
 }

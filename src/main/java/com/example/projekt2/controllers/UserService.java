@@ -12,15 +12,21 @@ public class UserService {
     public boolean userLogin(String username, String password) throws SQLException {
         // work in progress.
         boolean isValid = true;
+
+        if (!repository.checkPassword(password).next() & !repository.checkUsername(username).next()) {
+            isValid = false;
+        }
+        return isValid;
+    }
+
+    public boolean createUser(String username, String password) throws SQLException {
+        boolean isValid = true;
+
         if (repository.checkPassword(password).next() & repository.checkUsername(username).next()) {
             repository.createUser(username, password);
         } else {
             isValid = false;
         }
         return isValid;
-    }
-
-    public void createUser(String username, String password) {
-        // Work in progress
     }
 }

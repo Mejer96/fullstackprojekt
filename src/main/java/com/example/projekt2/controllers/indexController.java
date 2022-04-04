@@ -16,9 +16,6 @@ public class indexController {
 
     @GetMapping("/show-wishlists")
     public String showWishlists(Model model) {
-        Wishlist wishlist = new Wishlist("Wishlist", "test", "testID");
-        model.addAttribute("wishlist", wishlist);
-
         return "show-wishlists";
     }
 
@@ -59,8 +56,13 @@ public class indexController {
     }
 
     @PostMapping("/sign-in")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
+    public String getLogin(@RequestParam("username") String username, @RequestParam("password") String password) {
         return "redirect:/index";
+    }
+
+    @GetMapping("/sign-in")
+    public String signIn() {
+        return "sign-in";
     }
 
 }
