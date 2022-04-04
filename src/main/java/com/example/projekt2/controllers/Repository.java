@@ -61,12 +61,12 @@ public class Repository {
 
     public void createWish(String name, int price, String description, String wishlistID) {
         Statement statement = createStatement();
-        String mySQLStatement = "INSERT INTO users (item_name, item_price, item_description, wishlist_ID) VALUES (" + name + "," + price + "," + description + "," + wishlistID + ")";
+        String mySQLStatement = "INSERT INTO wish (item_name, item_price, item_description, wishlist_ID) VALUES (" + name + "," + price + "," + description + "," + wishlistID + ")";
     }
 
 
     public void createWishlist(String name, String description) {
         Statement statement = createStatement();
-        String mySQLStatement = "INSERT INTO users (wishlist_name, wishlist_description, user_ID) VALUES (" + name + "," + description + ")";
+        String mySQLStatement = "INSERT INTO wishlist (wishlist_name, wishlist_description, user_ID) VALUES (" + name + "," + description + ")";
     }
 }
