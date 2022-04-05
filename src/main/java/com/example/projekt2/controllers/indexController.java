@@ -85,6 +85,11 @@ public class indexController {
         return "redirect:/index";
     }
 
+    @GetMapping("/delete-wish/{id}")
+    public String deleteWish(@PathVariable("id") String id) {
+        return "delete-wish";
+    }
+
     @GetMapping("/sign-in")
     public String signIn() {
         return "sign-in";
