@@ -107,7 +107,7 @@ public class Repository {
 
     public void deleteWish(String wishID) {
         Statement statement = createStatement();
-        String mySQLStatement = "DELETE FROM wishlist WHERE wish_ID='" + wishID + "'";
+        String mySQLStatement = "DELETE FROM wish WHERE wish_ID='" + wishID + "'";
         createQuery(mySQLStatement, statement);
     }
 
