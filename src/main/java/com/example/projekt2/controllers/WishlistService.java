@@ -10,7 +10,7 @@ public class WishlistService {
         this.repository = repository;
     }
 
-    public void createWishlist(String name, String description, String userID) {
+    public void createWishlist(String name, String description, String userID) throws SQLException {
         repository.createWishlist(name, description, userID);
     }
 
@@ -18,7 +18,7 @@ public class WishlistService {
         return repository.getWishlists(userID);
     }
 
-    public void createWish(String itemName, String itemPrice, String itemDescription, String wishlistID) {
+    public void createWish(String itemName, String itemPrice, String itemDescription, String wishlistID) throws SQLException {
         repository.createWish(itemName, itemPrice, itemDescription, wishlistID);
     }
 
