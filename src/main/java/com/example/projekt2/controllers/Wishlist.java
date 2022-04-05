@@ -1,47 +1,37 @@
 package com.example.projekt2.controllers;
 
 public class Wishlist {
-    private String name;
-    private String description;
-    private String ID;
-    private String user_ID;
+    private String wishlistName;
+    private String wishlistDescription;
+    private String wishlistID;
 
-    public Wishlist(String name, String description, String ID, String user_ID) {
-        this.name = name;
-        this.description = description;
-        this.ID = ID;
-        this.user_ID = user_ID;
+    public Wishlist(String wishlistName, String wishlistDescription, String wishlistID) {
+        this.wishlistName = wishlistName;
+        this.wishlistDescription = wishlistDescription;
+        this.wishlistID = wishlistID;
     }
 
     public String getName() {
-        return name;
+        return wishlistName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.wishlistName = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getWishlistDescription() {
+        return wishlistDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String wishlistDescription) {
+        this.wishlistDescription = wishlistDescription;
     }
 
-    public String getID() {
-        return ID;
+    public String getwishlistID() {
+        return wishlistID;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public String getUser_ID() {
-        return user_ID;
-    }
-
-    public void setUser_ID(String user_ID) {
-        this.user_ID = user_ID;
+    public void setWishlistID(String wishlistID) {
+        this.wishlistID = wishlistDescription;
     }
 }

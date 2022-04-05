@@ -9,20 +9,20 @@ public class UserService {
         this.repository = repository;
     }
 
-    public boolean userLogin(String username, String password) throws SQLException {
-        // work in progress.
-        boolean isValid = true;
+    public User userLogin(String username, String password) throws SQLException {
+        User user = null;
 
-        if (!repository.checkPassword(password).next() & !repository.checkUsername(username).next()) {
-            isValid = false;
+        if (repository.checkPassword(password).next() & repository.checkUsername(username).next()) {
+            user = repository.getUser(username, password);
         }
-        return isValid;
+        return user;
     }
+
 
     public boolean createUser(String username, String password) throws SQLException {
         boolean isValid = true;
 
-        if (repository.checkPassword(password).next() & repository.checkUsername(username).next()) {
+        if (!repository.checkUsername(username).next()) {
             repository.createUser(username, password);
         } else {
             isValid = false;

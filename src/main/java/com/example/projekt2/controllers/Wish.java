@@ -2,15 +2,13 @@ package com.example.projekt2.controllers;
 
 public class Wish {
     private String name;
-    private float price;
+    private String price;
     private String description;
-    private String ID;
 
-    public Wish(String name, float price, String description, String ID) {
+    public Wish(String name, String price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
-        this.ID = ID;
     }
 
     public String getName() {
@@ -21,11 +19,11 @@ public class Wish {
         this.name = name;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -37,11 +35,4 @@ public class Wish {
         this.description = description;
     }
 
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
 }
