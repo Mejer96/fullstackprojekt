@@ -44,7 +44,7 @@ public class indexController {
 
     @GetMapping("/delete-wishlist/{wishlist-id}")
     public String deleteWishlist(@PathVariable("wishlist-id") String id, Model model) {
-        // WIP
+        // WIP...
         return "show-wishlists";
     }
 
