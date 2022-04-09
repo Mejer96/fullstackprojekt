@@ -2,14 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <title>Tilmeld dig</title>
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li class="navbar-right" style="float: left"><a href="index.html">Ønskelisten</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
-<form th:action="@{/join}" method="POST">
-    <label for="username">Username</label>
-    <input type="text" name="username">
-    <label for="password">Password</label>
-    <input type="text" name="password">
-</form>
+
+<div id="contents">
+    <div id="sidebar">
+    </div>
+    <div id="mainContents">
+        <div class="center-div">
+            <div class="flex-center">
+                <h2>Udfyld formularen for at oprette en bruger</h2>
+                <form th:action="@{/join}" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" name="username">
+                    <label for="password">Password</label>
+                    <input type="text" name="password">
+
+                    <button type="submit" class="button">Opret</button>
+                </form>
+            </div>
+
+            <p><br><br>Eller klik her for at logge ind</p>
+            <a href="sign-in.html" class="button">Log ind</a>
+        </div>
+    </div>
+    <div id="sidebar2">
+    </div>
+</div>
 </body>
 </html>

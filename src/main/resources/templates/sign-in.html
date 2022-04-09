@@ -2,16 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <title>Log ind</title>
 </head>
+
+<header>
+    <nav>
+        <ul>
+            <li class="navbar-right" style="float: left"><a href="index.html">Ønskelisten</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
+<div id="contents">
+    <div id="sidebar">
+    </div>
+    <div id="mainContents">
+        <div class="center-div">
+            <div class="flex-center">
+                <form action="/sign-up" method="POST">
+                    <label for="username">Brugernavn</label>
+                    <input type="text" name="username">
+                    <label for="password">Password</label>
+                    <input type="text" name="password">
 
-<form action="/sign-up" method="POST">
-    <label for="username">Username</label>
-    <input type="text" name="username">
-    <label for="password">Password</label>
-    <input type="text" name="password">
-</form>
-
+                    <button type="submit" class="button">Log ind</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar2">
+    </div>
+</div>
 </body>
 </html>
